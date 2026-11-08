@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #0b1210;
+  --color-panel: #101a17;
+  --color-sidebar: #0e1714;
+  --color-sage: #8fd1b0;
+  --color-ink: #f2f1ec;
+  --color-soft: #c3d0c8;
+  --color-muted: #9fb1a7;
+  --color-line: rgba(180, 210, 195, 0.14);
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-night text-soft font-sans;
+  }
+}
+
+@keyframes tail-wag {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+
+.cat-tail {
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation: tail-wag 2.4s ease-in-out infinite;
+}
+
+.cat-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-tail,
+  .cat-eye {
+    animation: none;
+  }
+}
