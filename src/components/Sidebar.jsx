@@ -1,4 +1,4 @@
-import { Code, Folder, House, Icon, Mail, Sparkle, Sparkles, Star, User } from "lucide-react";
+import { Code, Folder, House, Icon, Mail, Sparkles, Star, User } from "lucide-react";
 import MusicPlayer from "./MusicPlayer";
 import SocialLinks from "./SocialLinks";
 

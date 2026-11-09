@@ -1,7 +1,9 @@
 import Sidebar from "./components/Sidebar";
+import About from "./sections/About";
 import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 
-const sections = ["about", "projects", "skills", "beyond", "contact"];
+const sections = ["skills", "beyond", "contact"];
 
 export default function App() {
   return (
@@ -10,7 +12,8 @@ export default function App() {
 
       <main id="top" className="min-w-0 flex-1">
         <Hero />
-
+        <About />
+        <Projects />
         {sections.map((id) => (
           <section
             key={id}
