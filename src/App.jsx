@@ -1,9 +1,11 @@
+import { Footer } from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import About from "./sections/About";
+import Beyond from "./sections/Beyond";
+import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
-
-const sections = ["skills", "beyond", "contact"];
+import Skills from "./sections/Skills";
 
 export default function App() {
   return (
@@ -14,15 +16,10 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
-        {sections.map((id) => (
-          <section
-            key={id}
-            id={id}
-            className="flex min-h-[60vh] items-center justify-center border-t border-line"
-          >
-            <h2 className="font-serif text-5xl capitalize text-ink">{id}</h2>
-          </section>
-        ))}
+        <Skills />
+        <Beyond />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );
