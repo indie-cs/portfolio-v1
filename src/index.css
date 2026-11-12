@@ -33,21 +33,96 @@
   96% { transform: scaleY(0.1); }
 }
 
-.cat-tail {
-  transform-box: fill-box;
-  transform-origin: 0% 100%;
-  animation: tail-wag 2.4s ease-in-out infinite;
+
+/* Pixel cat */
+.pixel-cat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -8px;
 }
 
-.cat-eye {
+.pixel-cat {
+  width: 100px;
+  height: auto;
+  overflow: visible;
+  color: var(--color-ink);
+}
+
+/* Outline style */
+.pixel-cat .cat-body,
+.pixel-cat .cat-tail {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.pixel-cat .cat-eyes {
+  fill: currentColor;
   transform-box: fill-box;
   transform-origin: center;
-  animation: blink 5s infinite;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pixel-cat .cat-eyes {
+    animation: cat-blink 5s infinite;
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cat-tail,
-  .cat-eye {
-    animation: none;
+.pixel-cat .cat-mouth {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: square;
+}
+
+/* Breathing */
+.pixel-cat .cat-body {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pixel-cat .cat-body {
+    animation: cat-breathe 3s ease-in-out infinite;
   }
+}
+/* Tail movement */
+.pixel-cat .cat-tail {
+  transform-box: view-box;
+  transform-origin: 112px 102px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pixel-cat .cat-tail {
+    animation: cat-tail-wag 2.5s ease-in-out infinite;
+  }
+}
+/* Animations */
+@keyframes cat-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes cat-tail-wag {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(-8deg); }
+}
+
+@keyframes cat-blink {
+  0%, 44%, 48%, 100% { transform: scaleY(1); }
+  46% { transform: scaleY(0.1); }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-cat * {
+    animation: none !important;
+  }
+}
+
+
+.sidebar-scroll{
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180, 210, 195, 0.35) transparent;
 }

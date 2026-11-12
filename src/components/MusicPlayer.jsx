@@ -1,5 +1,7 @@
 import { Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
+import audioImg from "../assets/images/audio.jpg";
+
 
 export default function MusicPlayer({ title, artist, src }) {
   const audioRef = useRef(null);
@@ -24,7 +26,9 @@ export default function MusicPlayer({ title, artist, src }) {
 
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-line bg-sage/5 p-3.5">
-      <div className="h-20 rounded-lg bg-linear-to-br from-[#1b2a3a] via-[#14201f] to-[#0f1a17]" />
+      <div className="h-20 rounded-lg bg-linear-to-br from-[#1b2a3a] via-[#14201f] to-[#0f1a17]" >
+        <img src={audioImg} alt="Album cover" className="h-full w-full rounded-lg object-cover" />
+      </div>
       <div className="leading-snug">
         <p className="text-sm font-medium text-ink">{title}</p>
         <p className="text-xs text-muted">{artist}</p>
