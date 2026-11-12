@@ -9,7 +9,7 @@ export const projects = [
     status: "Live",
     tags: ["React", "TailwindCSS", "Vite"],
     image: portfolioImage,
-    demo: "",
+    demo: "https://indie-cs.github.io/portfolio-v1/",
     code: "",
   },
   {
