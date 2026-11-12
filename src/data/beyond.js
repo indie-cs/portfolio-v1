@@ -1,6 +1,6 @@
-import booksImg from "../assets/images/beyond/books.jpg";
-import craftsImg from "../assets/images/beyond/crafts.jpg";
-import sportsImg from "../assets/images/beyond/sports.jpg";
+import booksImg from "../assets/images/Beyond/books.jpg";
+import craftsImg from "../assets/images/Beyond/crafts.jpg";
+import sportsImg from "../assets/images/Beyond/sports.jpg";
 export const interests = [
   "Reading",
   "Learning",
