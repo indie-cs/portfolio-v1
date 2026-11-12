@@ -13,7 +13,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.2.16",
     "@tailwindcss/vite": "^4.3.5",
     "lucide-react": "^1.70.0",
     "react": "^19.3.1",
