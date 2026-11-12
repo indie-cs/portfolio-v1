@@ -29,7 +29,7 @@ export const steps = [
   {
     number: "03",
     title: "Build",
-    text: "Ship clean, tested code and keep improving it with feedback.",
+    text: "Ship clean, tested code and keep improving it with feedback. ",
   },
 
 ];
